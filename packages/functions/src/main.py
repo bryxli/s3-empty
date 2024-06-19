@@ -30,7 +30,7 @@ def empty_bucket(bucket_name):
     except Exception as e:
         logger.error(f"An error occurred: {e}")
 
-def handler():
+def handler(event, context):
     bucket_list = ['cdk-hnb659fds-assets-457733617380-us-east-1']
     for bucket in bucket_list:
         empty_bucket(bucket)
